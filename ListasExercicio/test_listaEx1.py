@@ -2,7 +2,7 @@ import unittest
 from io import StringIO
 from unittest.mock import patch
 
-import listaEx1
+import ListasExercicio.listaEx1 as listaEx1
 
 
 class TestListaEx1(unittest.TestCase):
