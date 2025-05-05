@@ -1,0 +1,562 @@
+{
+"listaCidades": [
+    {
+    "cidade": "Capanema",
+    "clima": {
+        "location": {
+            "name": "Capanema",
+            "region": "Para",
+            "country": "Brazil",
+            "lat": -1.2,
+            "lon": -47.1833,
+            "tz_id": "America/Belem",
+            "localtime_epoch": 1746380060,
+            "localtime": "2025-05-04 14:34"
+        },
+        "current": {
+            "last_updated_epoch": 1746379800,
+            "last_updated": "2025-05-04 14:30",
+            "temp_c": 31.9,
+            "temp_f": 89.4,
+            "is_day": 1,
+            "condition": {
+                "text": "Patchy rain nearby",
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/176.png",
+                "code": 1063
+            },
+            "wind_mph": 5.6,
+            "wind_kph": 9.0,
+            "wind_degree": 86,
+            "wind_dir": "E",
+            "pressure_mb": 1009.0,
+            "pressure_in": 29.8,
+            "precip_mm": 0.01,
+            "precip_in": 0.0,
+            "humidity": 53,
+            "cloud": 66,
+            "feelslike_c": 35.3,
+            "feelslike_f": 95.5,
+            "windchill_c": 31.9,
+            "windchill_f": 89.4,
+            "heatindex_c": 35.3,
+            "heatindex_f": 95.5,
+            "dewpoint_c": 21.0,
+            "dewpoint_f": 69.9,
+            "vis_km": 10.0,
+            "vis_miles": 6.0,
+            "uv": 9.2,
+            "gust_mph": 7.5,
+            "gust_kph": 12.0
+        }
+    },
+    "dadosPais": [
+        {
+            "name": {
+                "common": "Brazil",
+                "official": "Federative Republic of Brazil",
+                "nativeName": {
+                    "por": {
+                        "official": "República Federativa do Brasil",
+                        "common": "Brasil"
+                    }
+                }
+            },
+            "tld": [
+                ".br"
+            ],
+            "cca2": "BR",
+            "ccn3": "076",
+            "cioc": "BRA",
+            "independent": true,
+            "status": "officially-assigned",
+            "unMember": true,
+            "currencies": {
+                "BRL": {
+                    "symbol": "R$",
+                    "name": "Brazilian real"
+                }
+            },
+            "idd": {
+                "root": "+5",
+                "suffixes": [
+                    "5"
+                ]
+            },
+            "capital": [
+                "Brasília"
+            ],
+            "altSpellings": [
+                "BR",
+                "Brasil",
+                "Federative Republic of Brazil",
+                "República Federativa do Brasil"
+            ],
+            "region": "Americas",
+            "subregion": "South America",
+            "languages": {
+                "por": "Portuguese"
+            },
+            "latlng": [
+                -10.0,
+                -55.0
+            ],
+            "landlocked": false,
+            "borders": [
+                "ARG",
+                "BOL",
+                "COL",
+                "GUF",
+                "GUY",
+                "PRY",
+                "PER",
+                "SUR",
+                "URY",
+                "VEN"
+            ],
+            "area": 8515767.0,
+            "demonyms": {
+                "eng": {
+                    "f": "Brazilian",
+                    "m": "Brazilian"
+                },
+                "fra": {
+                    "f": "Brésilienne",
+                    "m": "Brésilien"
+                }
+            },
+            "cca3": "BRA",
+            "translations": {
+                "ara": {
+                    "official": "جمهورية البرازيل الاتحادية",
+                    "common": "البرازيل"
+                },
+                "bre": {
+                    "official": "Republik Kevreel Brazil",
+                    "common": "Brazil"
+                },
+                "ces": {
+                    "official": "Brazilská federativní republika",
+                    "common": "Brazílie"
+                },
+                "cym": {
+                    "official": "Gweriniaeth Ffederal Brasil",
+                    "common": "Brasil"
+                },
+                "deu": {
+                    "official": "Föderative Republik Brasilien",
+                    "common": "Brasilien"
+                },
+                "est": {
+                    "official": "Brasiilia Liitvabariik",
+                    "common": "Brasiilia"
+                },
+                "fin": {
+                    "official": "Brasilian liittotasavalta",
+                    "common": "Brasilia"
+                },
+                "fra": {
+                    "official": "République fédérative du Brésil",
+                    "common": "Brésil"
+                },
+                "hrv": {
+                    "official": "Savezne Republike Brazil",
+                    "common": "Brazil"
+                },
+                "hun": {
+                    "official": "Brazil Szövetségi Köztársaság",
+                    "common": "Brazília"
+                },
+                "ind": {
+                    "official": "Republik Federatif Brasil",
+                    "common": "Brasil"
+                },
+                "ita": {
+                    "official": "Repubblica federativa del Brasile",
+                    "common": "Brasile"
+                },
+                "jpn": {
+                    "official": "ブラジル連邦共和国",
+                    "common": "ブラジル"
+                },
+                "kor": {
+                    "official": "브라질 연방 공화국",
+                    "common": "브라질"
+                },
+                "nld": {
+                    "official": "Federale Republiek Brazilië",
+                    "common": "Brazilië"
+                },
+                "per": {
+                    "official": "جمهوری فدراتیو برزیل",
+                    "common": "برزیل"
+                },
+                "pol": {
+                    "official": "Federacyjna Republika Brazylii",
+                    "common": "Brazylia"
+                },
+                "por": {
+                    "official": "República Federativa do Brasil",
+                    "common": "Brasil"
+                },
+                "rus": {
+                    "official": "Федеративная Республика Бразилия",
+                    "common": "Бразилия"
+                },
+                "slk": {
+                    "official": "Brazílska federatívna republika",
+                    "common": "Brazília"
+                },
+                "spa": {
+                    "official": "República Federativa del Brasil",
+                    "common": "Brasil"
+                },
+                "srp": {
+                    "official": "Савезна Република Бразил",
+                    "common": "Бразил"
+                },
+                "swe": {
+                    "official": "Förbundsrepubliken Brasilien",
+                    "common": "Brasilien"
+                },
+                "tur": {
+                    "official": "Brezilya Federal Cumhuriyeti",
+                    "common": "Brezilya"
+                },
+                "urd": {
+                    "official": "وفاقی جمہوریہ برازیل",
+                    "common": "برازیل"
+                },
+                "zho": {
+                    "official": "巴西联邦共和国",
+                    "common": "巴西"
+                }
+            },
+            "flag": "🇧🇷",
+            "maps": {
+                "googleMaps": "https://goo.gl/maps/waCKk21HeeqFzkNC9",
+                "openStreetMaps": "https://www.openstreetmap.org/relation/59470"
+            },
+            "population": 212559409,
+            "gini": {
+                "2019": 53.4
+            },
+            "fifa": "BRA",
+            "car": {
+                "signs": [
+                    "BR"
+                ],
+                "side": "right"
+            },
+            "timezones": [
+                "UTC-05:00",
+                "UTC-04:00",
+                "UTC-03:00",
+                "UTC-02:00"
+            ],
+            "continents": [
+                "South America"
+            ],
+            "flags": {
+                "png": "https://flagcdn.com/w320/br.png",
+                "svg": "https://flagcdn.com/br.svg",
+                "alt": "The flag of Brazil has a green field with a large yellow rhombus in the center. Within the rhombus is a dark blue globe with twenty-seven small five-pointed white stars depicting a starry sky and a thin white convex horizontal band inscribed with the national motto 'Ordem e Progresso' across its center."
+            },
+            "coatOfArms": {
+                "png": "https://mainfacts.com/media/images/coats_of_arms/br.png",
+                "svg": "https://mainfacts.com/media/images/coats_of_arms/br.svg"
+            },
+            "startOfWeek": "sunday",
+            "capitalInfo": {
+                "latlng": [
+                    -15.79,
+                    -47.88
+                ]
+            },
+            "postalCode": {
+                "format": "#####-###",
+                "regex": "^(\\d{8})$"
+            }
+        }
+    ],
+    "dadosAr": null
+},
+{
+    "cidade": "Belo Horizonte",
+    "clima": {
+        "location": {
+            "name": "Belo Horizonte",
+            "region": "Minas Gerais",
+            "country": "Brazil",
+            "lat": -19.9167,
+            "lon": -43.9333,
+            "tz_id": "America/Sao_Paulo",
+            "localtime_epoch": 1746380166,
+            "localtime": "2025-05-04 14:36"
+        },
+        "current": {
+            "last_updated_epoch": 1746379800,
+            "last_updated": "2025-05-04 14:30",
+            "temp_c": 23.0,
+            "temp_f": 73.4,
+            "is_day": 1,
+            "condition": {
+                "text": "Partly cloudy",
+                "icon": "//cdn.weatherapi.com/weather/64x64/day/116.png",
+                "code": 1003
+            },
+            "wind_mph": 5.6,
+            "wind_kph": 9.0,
+            "wind_degree": 64,
+            "wind_dir": "ENE",
+            "pressure_mb": 1021.0,
+            "pressure_in": 30.15,
+            "precip_mm": 0.0,
+            "precip_in": 0.0,
+            "humidity": 44,
+            "cloud": 75,
+            "feelslike_c": 24.2,
+            "feelslike_f": 75.6,
+            "windchill_c": 24.6,
+            "windchill_f": 76.3,
+            "heatindex_c": 25.0,
+            "heatindex_f": 77.0,
+            "dewpoint_c": 9.5,
+            "dewpoint_f": 49.0,
+            "vis_km": 10.0,
+            "vis_miles": 6.0,
+            "uv": 5.4,
+            "gust_mph": 6.4,
+            "gust_kph": 10.4
+        }
+    },
+    "dadosPais": [
+        {
+            "name": {
+                "common": "Brazil",
+                "official": "Federative Republic of Brazil",
+                "nativeName": {
+                    "por": {
+                        "official": "República Federativa do Brasil",
+                        "common": "Brasil"
+                    }
+                }
+            },
+            "tld": [
+                ".br"
+            ],
+            "cca2": "BR",
+            "ccn3": "076",
+            "cioc": "BRA",
+            "independent": true,
+            "status": "officially-assigned",
+            "unMember": true,
+            "currencies": {
+                "BRL": {
+                    "symbol": "R$",
+                    "name": "Brazilian real"
+                }
+            },
+            "idd": {
+                "root": "+5",
+                "suffixes": [
+                    "5"
+                ]
+            },
+            "capital": [
+                "Brasília"
+            ],
+            "altSpellings": [
+                "BR",
+                "Brasil",
+                "Federative Republic of Brazil",
+                "República Federativa do Brasil"
+            ],
+            "region": "Americas",
+            "subregion": "South America",
+            "languages": {
+                "por": "Portuguese"
+            },
+            "latlng": [
+                -10.0,
+                -55.0
+            ],
+            "landlocked": false,
+            "borders": [
+                "ARG",
+                "BOL",
+                "COL",
+                "GUF",
+                "GUY",
+                "PRY",
+                "PER",
+                "SUR",
+                "URY",
+                "VEN"
+            ],
+            "area": 8515767.0,
+            "demonyms": {
+                "eng": {
+                    "f": "Brazilian",
+                    "m": "Brazilian"
+                },
+                "fra": {
+                    "f": "Brésilienne",
+                    "m": "Brésilien"
+                }
+            },
+            "cca3": "BRA",
+            "translations": {
+                "ara": {
+                    "official": "جمهورية البرازيل الاتحادية",
+                    "common": "البرازيل"
+                },
+                "bre": {
+                    "official": "Republik Kevreel Brazil",
+                    "common": "Brazil"
+                },
+                "ces": {
+                    "official": "Brazilská federativní republika",
+                    "common": "Brazílie"
+                },
+                "cym": {
+                    "official": "Gweriniaeth Ffederal Brasil",
+                    "common": "Brasil"
+                },
+                "deu": {
+                    "official": "Föderative Republik Brasilien",
+                    "common": "Brasilien"
+                },
+                "est": {
+                    "official": "Brasiilia Liitvabariik",
+                    "common": "Brasiilia"
+                },
+                "fin": {
+                    "official": "Brasilian liittotasavalta",
+                    "common": "Brasilia"
+                },
+                "fra": {
+                    "official": "République fédérative du Brésil",
+                    "common": "Brésil"
+                },
+                "hrv": {
+                    "official": "Savezne Republike Brazil",
+                    "common": "Brazil"
+                },
+                "hun": {
+                    "official": "Brazil Szövetségi Köztársaság",
+                    "common": "Brazília"
+                },
+                "ind": {
+                    "official": "Republik Federatif Brasil",
+                    "common": "Brasil"
+                },
+                "ita": {
+                    "official": "Repubblica federativa del Brasile",
+                    "common": "Brasile"
+                },
+                "jpn": {
+                    "official": "ブラジル連邦共和国",
+                    "common": "ブラジル"
+                },
+                "kor": {
+                    "official": "브라질 연방 공화국",
+                    "common": "브라질"
+                },
+                "nld": {
+                    "official": "Federale Republiek Brazilië",
+                    "common": "Brazilië"
+                },
+                "per": {
+                    "official": "جمهوری فدراتیو برزیل",
+                    "common": "برزیل"
+                },
+                "pol": {
+                    "official": "Federacyjna Republika Brazylii",
+                    "common": "Brazylia"
+                },
+                "por": {
+                    "official": "República Federativa do Brasil",
+                    "common": "Brasil"
+                },
+                "rus": {
+                    "official": "Федеративная Республика Бразилия",
+                    "common": "Бразилия"
+                },
+                "slk": {
+                    "official": "Brazílska federatívna republika",
+                    "common": "Brazília"
+                },
+                "spa": {
+                    "official": "República Federativa del Brasil",
+                    "common": "Brasil"
+                },
+                "srp": {
+                    "official": "Савезна Република Бразил",
+                    "common": "Бразил"
+                },
+                "swe": {
+                    "official": "Förbundsrepubliken Brasilien",
+                    "common": "Brasilien"
+                },
+                "tur": {
+                    "official": "Brezilya Federal Cumhuriyeti",
+                    "common": "Brezilya"
+                },
+                "urd": {
+                    "official": "وفاقی جمہوریہ برازیل",
+                    "common": "برازیل"
+                },
+                "zho": {
+                    "official": "巴西联邦共和国",
+                    "common": "巴西"
+                }
+            },
+            "flag": "🇧🇷",
+            "maps": {
+                "googleMaps": "https://goo.gl/maps/waCKk21HeeqFzkNC9",
+                "openStreetMaps": "https://www.openstreetmap.org/relation/59470"
+            },
+            "population": 212559409,
+            "gini": {
+                "2019": 53.4
+            },
+            "fifa": "BRA",
+            "car": {
+                "signs": [
+                    "BR"
+                ],
+                "side": "right"
+            },
+            "timezones": [
+                "UTC-05:00",
+                "UTC-04:00",
+                "UTC-03:00",
+                "UTC-02:00"
+            ],
+            "continents": [
+                "South America"
+            ],
+            "flags": {
+                "png": "https://flagcdn.com/w320/br.png",
+                "svg": "https://flagcdn.com/br.svg",
+                "alt": "The flag of Brazil has a green field with a large yellow rhombus in the center. Within the rhombus is a dark blue globe with twenty-seven small five-pointed white stars depicting a starry sky and a thin white convex horizontal band inscribed with the national motto 'Ordem e Progresso' across its center."
+            },
+            "coatOfArms": {
+                "png": "https://mainfacts.com/media/images/coats_of_arms/br.png",
+                "svg": "https://mainfacts.com/media/images/coats_of_arms/br.svg"
+            },
+            "startOfWeek": "sunday",
+            "capitalInfo": {
+                "latlng": [
+                    -15.79,
+                    -47.88
+                ]
+            },
+            "postalCode": {
+                "format": "#####-###",
+                "regex": "^(\\d{8})$"
+            }
+        }
+    ],
+    "dadosAr": null
+}]}
