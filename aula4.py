@@ -19,7 +19,7 @@ db = os.getenv("PG_DB")
 engine = psycopg2.connect(f"postgresql://{user}:{password}@{host}/{db}?sslmode=require")
 
 
-def run_query(sql, coon):
+def run_query(sql, coon=engine):
     """
     Executes a SQL query on the provided database connection and returns the result as a DataFrame.
 
@@ -43,7 +43,7 @@ def fetch_client_data():
     JOIN country co ON ci.country_id = co.country_id
     """
 
-    df_clientes = run_query(query_clientes, engine)
+    df_clientes = run_query(query_clientes)
     df_clientes.head()
     print(df_clientes.head())
     return df_clientes
@@ -55,7 +55,7 @@ def buscar_clima(cidade):
         url = "http://api.weatherapi.com/v1/current.json?" f"key={api_key}&q={cidade}"
         resposta = requests.get(url, timeout=10)
         return resposta.json()["current"]["temp_c"]
-    except requests.exceptions.RequestException as e:
+    except Exception as e:
         print(f"Error fetching weather data: {e}")
         return None
 
@@ -65,12 +65,12 @@ def merge_client_weather(df_clientes):
     amostra = df_clientes["city"].drop_duplicates().head(5)
     df_clima = pd.DataFrame({"cidade": amostra})
     df_clima["temperatura"] = df_clima["cidade"].apply(buscar_clima)
-    df_clima
+    print(df_clima.head())
     # Exemplo de merge
     df_analise = df_clientes.merge(
         df_clima, how="left", left_on="city", right_on="cidade"
     )
-    df_analise.head()
+    print(df_analise.head())
     return df_analise
 
 
