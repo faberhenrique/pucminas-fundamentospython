@@ -14,7 +14,9 @@ import pandas as pd
 import psycopg2
 import requests
 import seaborn as sns
+import time
 from dotenv import load_dotenv
+from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Carregar variáveis de ambiente
 load_dotenv()
@@ -24,6 +26,8 @@ user = os.getenv("PG_USER")
 password = os.getenv("PG_PASSWORD")
 host = os.getenv("PG_HOST")
 db = os.getenv("PG_DB")
+api_key = os.getenv("WEATHER_KEY")
+
 
 engine = psycopg2.connect(f"postgresql://{user}:{password}@{host}/{db}?sslmode=require")
 
@@ -57,6 +61,85 @@ def run_query(sql, coon=engine):
 # 	•	Use a WeatherAPI para consultar a temperatura atual.
 # 	•	Filtre apenas cidades com temperatura entre 18°C e 24°C.
 # 	•	Resultado: qual o faturamento total vindo dessas cidades?
+
+query = '''
+SELECT ci.city, SUM(p.amount) AS receita_total
+FROM payment p
+JOIN customer c ON p.customer_id = c.customer_id
+JOIN address a ON c.address_id = a.address_id
+JOIN city ci ON a.city_id = ci.city_id
+GROUP BY ci.city
+ORDER BY receita_total DESC limit 100
+'''
+df_receita = run_query(query)
+
+def ex2_sequencial(run_query, query, get_temperatura,df_receita):
+
+# Adiciona coluna de temperatura
+    df_receita["temperatura"] = df_receita["city"].apply(get_temperatura)
+
+# Remove cidades sem temperatura
+    df_receita = df_receita.dropna(subset=["temperatura"])
+
+# Filtra cidades com clima ameno (18°C a 24°C)
+    df_ameno = df_receita[(df_receita["temperatura"] >= 18) & (df_receita["temperatura"] <= 24)]
+
+# Soma da receita total dessas cidades
+    total_ameno = df_ameno["receita_total"].sum()
+
+    print(f"Receita total em cidades com temperatura entre 18°C e 24°C: ${total_ameno:.2f}")
+    print("\nCidades com clima ameno e suas receitas:")
+    print(df_ameno.sort_values(by="receita_total", ascending=False))
+    return df_receita
+
+
+start = time.time()
+df_receita = ex2_sequencial(run_query, query, get_temperatura,df_receita)
+end = time.time()
+print(f"Tempo de execução: {end - start:.2f} segundos")
+#   Exercício 2 -- PARELELO – Receita Bruta em Cidades com Clima Ameno
+
+
+def get_temperatura_paralelo(cidade):
+    api_key = os.getenv("WEATHER_KEY")
+    try:
+        r = requests.get(f"http://api.weatherapi.com/v1/current.json?key={api_key}&q={cidade}", timeout=5)
+        return cidade, r.json()["current"]["temp_c"]
+    except:
+        return cidade, None
+
+# Executa chamadas paralelas com ThreadPoolExecutor
+def ex2_parealelo(get_temperatura, df_receita):
+    cidades = df_receita["city"].unique()
+    resultados = {}
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        futures = {executor.submit(get_temperatura, cidade): cidade for cidade in cidades}
+        for future in as_completed(futures):
+            cidade, temp = future.result()
+            resultados[cidade] = temp
+
+# Mapeia resultados no DataFrame original
+    df_receita["temperatura"] = df_receita["city"].map(resultados)
+
+# Remove cidades sem temperatura
+    df_receita = df_receita.dropna(subset=["temperatura"])
+
+# Filtra cidades com clima ameno (18°C a 24°C)
+    df_ameno = df_receita[(df_receita["temperatura"] >= 18) & (df_receita["temperatura"] <= 24)]
+
+# Soma da receita total dessas cidades
+    total_ameno = df_ameno["receita_total"].sum()
+
+    print(f"Receita total em cidades com temperatura entre 18°C e 24°C: ${total_ameno:.2f}")
+    print("\nCidades com clima ameno e suas receitas:")
+    print(df_ameno.sort_values(by="receita_total", ascending=False))
+
+
+start = time.time()
+ex2_parealelo(get_temperatura_paralelo, df_receita)
+end = time.time()
+print(f"Tempo de execução: {end - start:.2f} segundos")
+
 
 
 # ⸻
